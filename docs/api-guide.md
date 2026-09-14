@@ -20,7 +20,7 @@ External registrations must be repeated after loading. Exclusions persist per sa
 `SetDialogueManagement(actor, true/false)` is the saved Add/Remove path used by
 Party and follower dialogue. It is separate from external registration.
 
-Automatic enrollment defaults off. Explicit registration still works. Custom
+Automatic enrollment defaults on. Explicit registration still works. Custom
 integrations should register only while following and unregister before scripted behavior.
 
 ## C++

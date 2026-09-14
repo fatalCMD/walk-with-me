@@ -14,7 +14,7 @@ namespace Wayfarer
     {
         bool enabled{ true };
         HandHolding::Tuning handHolding;
-        bool autoDiscover{ false };  
+        bool autoDiscover{ true };
         bool requirePlayerTeammate{ true };
         bool releaseInCombat{ true };
         bool releaseWhenSneaking{ true };

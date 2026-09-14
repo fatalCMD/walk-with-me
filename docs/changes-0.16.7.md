@@ -1,5 +1,8 @@
 # 0.16.7
 
+- Automatically add current and newly recruited followers when nearby. Upgrade older INIs once; keep later opt-outs.
+- Apply plugin exclusions before NFF enrollment.
+
 - Removed the 1-6 labels from the wheel. Number-key shortcuts still work.
 - Added gesture setup steps for Nemesis and Pandora.
 - Includes the GPMA upper-body patch; regenerate behaviors after installation.

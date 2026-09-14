@@ -338,7 +338,7 @@ namespace Wayfarer::Menu
             Label("PARTY",5);
             Im::SetNextItemWidth(E(9));dirty|=Im::SliderInt("Companion limit",&draft.maxFollowers,1,PARTY_CAPACITY,"%d",Im::ImGuiSliderFlags_AlwaysClamp);
             dirty|=Im::Checkbox("Automatically add followers",&draft.autoDiscover);
-            Help("Optional. Enroll eligible recruited followers without asking. Detection and manual Add remain available when this is off.");
+            Help("Adds current and newly recruited followers as they load nearby. Remove keeps a follower excluded. Manual Add remains available when this is off.");
             Im::BeginDisabled(!draft.autoDiscover);
             Im::BeginDisabled(!view.nffInstalled);dirty|=Im::Checkbox("Include NFF followers automatically",&draft.enforceNFF);
             Help("Include active NFF followers in automatic enrollment.");Im::EndDisabled();

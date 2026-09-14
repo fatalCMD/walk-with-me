@@ -1,4 +1,5 @@
 #include "custom_followers.h"
+#include "follower_settings.h"
 #include <iostream>
 #include <limits>
 
@@ -28,5 +29,18 @@ int main()
     old.emplace("018auri.esp"); old.emplace("myfollower.esp");
     check(!IsLegacyCustomBlocklist(old), "Additional user exclusions must survive");
     check(!IsLegacyCustomBlocklist({}), "Empty defaults need no migration");
+    CSimpleIniA ini;
+    ini.LoadData("[General]\nbAutoDiscover=false\n[Compatibility]\nbEnforceCustomFollowers=false\nsExcludedPlugins=myfollower.esp\n");
+    check(MigrateFollowerSettings(ini) && ini.GetBoolValue("General", "bAutoDiscover"), "Old manual default upgrades to automatic enrollment");
+    check(!ini.GetBoolValue("Compatibility", "bEnforceCustomFollowers"), "Upgrade preserves custom enforcement preference");
+    check(std::string(ini.GetValue("Compatibility", "sExcludedPlugins")) == "myfollower.esp", "Upgrade preserves exclusions");
+    ini.SetBoolValue("General", "bAutoDiscover", false);
+    std::string saved;
+    ini.Save(saved);
+    CSimpleIniA reloaded;
+    reloaded.LoadData(saved.c_str());
+    check(!MigrateFollowerSettings(reloaded) && !reloaded.GetBoolValue("General", "bAutoDiscover"), "Disabling automatic enrollment survives reload");
+    CSimpleIniA fresh;
+    check(MigrateFollowerSettings(fresh) && fresh.GetBoolValue("General", "bAutoDiscover"), "Missing enrollment settings enable discovery");
     return failures ? 1 : 0;
 }

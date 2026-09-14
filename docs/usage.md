@@ -13,9 +13,16 @@ Do not rename the Wayfarer DLL, ESP, scripts or INI; saves and other mods use th
 
 ## Party
 
-Open Walk With Me in Menu Framework. Use **Add**, or a follower's **Walk with me**
-dialogue. **Remove** releases control without dismissing them. This choice is saved.
-Automatic enrollment is off by default; existing INIs keep their saved setting.
+Current and newly recruited followers join automatically as they load nearby, up
+to the companion limit (10 maximum). No new game or manual Add is needed.
+
+Open Walk With Me in Menu Framework to manage Party. **Remove** releases control
+and prevents automatic re-addition without dismissing them. **Add** allows them
+back. These choices are saved. Older INIs enable automatic enrollment once on
+upgrade; turning it off afterward stays saved. Other preferences are retained.
+
+Custom followers must expose their recruitment through teammate state. Followers
+with private recruitment systems may need manual Add or an API integration.
 
 **Enforce custom followers** is on by default. Disable it to let their own AI take
 over, or exclude one follower. NFF enforcement has a separate setting. Wait orders,

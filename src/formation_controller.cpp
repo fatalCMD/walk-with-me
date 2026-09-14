@@ -645,14 +645,17 @@ namespace Wayfarer
             return "disabled";
         }
 
+        if (const auto* base = a_actor.GetActorBase()) {
+            if (const auto* file = base->GetFile(0); file && Settings::GetSingleton().IsPluginExcluded(file->GetFilename())) {
+                return "source plugin listed in sExcludedPlugins";
+            }
+        }
+
         if (IsCustomFollower(a_actor)) {
             if (!settings.enforceCustomFollowers) { return "custom follower enforcement is off"; }
             if (!HasCustomFollowState(a_actor.IsPlayerTeammate(), a_actor.AsActorValueOwner()->GetActorValue(RE::ActorValue::kWaitingForPlayer))) {
                 return "custom follower is not recruited or has been dismissed";
             }
-            const auto* base = a_actor.GetActorBase();
-            const auto* file = base ? base->GetFile(0) : nullptr;
-            if (file && Settings::GetSingleton().IsPluginExcluded(file->GetFilename())) { return "source plugin listed in sExcludedPlugins"; }
             return nullptr;
         }
 
@@ -666,11 +669,6 @@ namespace Wayfarer
         }
         if (!a_actor.IsInFaction(faction)) {
             return "not in CurrentFollowerFaction";
-        }
-        if (const auto* base = a_actor.GetActorBase()) {
-            if (const auto* file = base->GetFile(0); file && Settings::GetSingleton().IsPluginExcluded(file->GetFilename())) {
-                return "source plugin listed in sExcludedPlugins";
-            }
         }
         return nullptr;
     }

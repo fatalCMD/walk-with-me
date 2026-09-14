@@ -6,8 +6,8 @@ and let them rest nearby.
 ## Setup
 
 Install with MO2 or Vortex, enable `Wayfarer.esp`, then start Skyrim through SKSE.
-Open **Walk With Me** in SKSE Menu Framework. Add followers from Party or their
-**Walk with me** dialogue. Settings save automatically.
+Current and newly recruited followers join automatically when nearby. Open
+**Walk With Me** in SKSE Menu Framework to manage Party. Settings save automatically.
 
 The SE/AE build targets 1.5.97, selected 1.6.x builds and 1.7.99/1.7.104.
 The 1.6/GOG and 1.7 paths still need in-game testing. Install matching SKSE,

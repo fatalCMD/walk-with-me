@@ -8,7 +8,7 @@ int main()
     int failures = 0;
     auto check = [&](bool ok, const char* reason) { if (!ok) { ++failures; std::cerr << reason << '\n'; } };
     const Wayfarer::SettingsData defaults;
-    check(!defaults.autoDiscover, "Fresh and missing-INI defaults must not enroll detected followers");
+    check(defaults.autoDiscover, "Fresh and missing-INI defaults enroll eligible followers");
     check(FollowerDialogueRank(false, false, false, false, true, true) == 0, "Unmanaged follower offers add");
     check(FollowerDialogueRank(false, true, false, false, true, true) == 1, "Automatic management hides both topics");
     check(FollowerDialogueRank(true, true, false, false, true, true) == 2, "Manual origin survives automatic eligibility");

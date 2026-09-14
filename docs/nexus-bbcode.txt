@@ -4,7 +4,7 @@ Travel with up to 10 followers. Choose Natural, Lead, Companion, Rear, Relax or
 Vanilla. Adjust spacing, pace and rest settings in SKSE Menu Framework.
 
 Add followers from Party or their [b]Walk with me[/b] dialogue. Removing them releases
-this mod's control without dismissing them. Automatic enrollment is off by default.
+this mod's control without dismissing them. Current and newly recruited followers join automatically when nearby.
 
 Followers can use nearby seats, idles and conversation spots while resting.
 Temporary rest ends when you leave its range; Relax waits for another order.

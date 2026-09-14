@@ -161,7 +161,8 @@ assert b'SetDialogueManagement' in (root/'Scripts/Wayfarer.pex').read_bytes()
 import configparser
 settings=configparser.ConfigParser(inline_comment_prefixes=(';',))
 settings.read(root/'SKSE/Plugins/Wayfarer.ini',encoding='utf-8-sig')
-assert not settings.getboolean('General','bAutoDiscover'), 'shipped defaults must require explicit enrollment'
+assert settings.getboolean('General','bAutoDiscover'), 'shipped defaults must add recruited followers'
+assert settings.getint('General','iEnrollmentVersion') == 1, 'enrollment migration marker missing'
 
 import xml.etree.ElementTree as ET
 art=root/'Interface/WalkWithMe'

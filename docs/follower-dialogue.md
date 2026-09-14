@@ -1,7 +1,7 @@
 # Follower dialogue
 
 Party Add/Remove and follower dialogue share saved manual enrollment.
-Automatic enrollment defaults off, but nearby recruited followers remain visible.
+Automatic enrollment adds nearby recruited followers by default. Remove prevents re-addition.
 Existing INIs keep their setting. Explicit external registrations still work.
 
 Removal releases this mod without dismissing the follower and adds a saved exclusion.

@@ -114,7 +114,7 @@ target_include_directories(WayfarerBanterTests PRIVATE ${CMAKE_CURRENT_SOURCE_DI
 add_test(NAME WayfarerBanter COMMAND WayfarerBanterTests)
 add_executable(WayfarerCustomFollowerTests tests/custom_follower_tests.cpp)
 target_compile_features(WayfarerCustomFollowerTests PRIVATE cxx_std_20)
-target_include_directories(WayfarerCustomFollowerTests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(WayfarerCustomFollowerTests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include ${SIMPLEINI_INCLUDE_DIRS})
 add_test(NAME WayfarerCustomFollowers COMMAND WayfarerCustomFollowerTests)
 add_executable(WayfarerRuntimeTests tests/runtime_compatibility_tests.cpp)
 target_compile_features(WayfarerRuntimeTests PRIVATE cxx_std_20)

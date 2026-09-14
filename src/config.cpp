@@ -1,6 +1,7 @@
 #include "config.h"
 #include "custom_followers.h"
 #include "hotkey_settings.h"
+#include "follower_settings.h"
 
 namespace
 {
@@ -65,6 +66,13 @@ namespace Wayfarer
         if (ini.LoadFile(path.string().c_str()) < 0) {
             logger::warn("[Settings] {} was not found; using built-in defaults.", path.string());
             return;
+        }
+
+        if (MigrateFollowerSettings(ini)) {
+            if (ini.SaveFile(path.string().c_str()) < 0) {
+                logger::warn("[Settings] Could not save automatic enrollment upgrade");
+            }
+            logger::info("[Settings] Automatic follower enrollment enabled for this upgrade");
         }
 
         data.enabled = ini.GetBoolValue("General", "bEnabled", data.enabled);
@@ -199,6 +207,7 @@ namespace Wayfarer
         ini.LoadFile(path.string().c_str());  
         ini.SetBoolValue("General", "bEnabled", value.enabled);
         ini.SetBoolValue("General", "bAutoDiscover", value.autoDiscover);
+        ini.SetLongValue("General", "iEnrollmentVersion", 1);
         ini.SetBoolValue("Compatibility", "bEnforceNFF", value.enforceNFF);
         ini.SetBoolValue("PartyLife", "bWalkingBanter", value.walkingBanter);
         ini.SetBoolValue("PartyLife", "bVictoryCelebrations", value.victoryCelebrations);
