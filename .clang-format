@@ -1,0 +1,18 @@
+BasedOnStyle: Microsoft
+IndentWidth: 4
+ColumnLimit: 110
+PointerAlignment: Left
+ReferenceAlignment: Left
+NamespaceIndentation: All
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterNamespace: true
+  AfterFunction: true
+  AfterClass: true
+  AfterStruct: true
+  AfterControlStatement: Never
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Inline
+InsertBraces: true
+SortIncludes: CaseSensitive

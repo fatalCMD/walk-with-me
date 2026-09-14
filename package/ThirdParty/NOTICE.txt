@@ -1,0 +1,17 @@
+Walk With Me uses the SKSE Menu Framework 3 API header, dynamically resolving
+the separately installed SKSEMenuFramework.dll. The API is provided by
+QTR-Modding under GNU LGPL 2.1. Its license is included here.
+API source: https://github.com/QTR-Modding/SKSE-Menu-Framework-3-API
+The vendored header is available in Walk With Me's include/SKSEMenuFramework.h.
+The framework DLL is not redistributed by Walk With Me.
+
+The seven command-gesture HKX files under meshes/OpenAnimationReplacer/Walk With Me
+Signals are original Walk With Me animations authored for this release. They are
+covered by the preserved MIT license in WalkWithMe-MIT-LICENSE.txt. No Gesture Animation Remix or
+First Person Interactions HKX files are redistributed. Those mods remain separate
+requirements for their respective runtime integration and first-person gestures.
+
+The current DLL links alandtse/CommonLibSSE-NG 7.5.1, revision
+bedcb1e05418baba7b316a650b6180c2dd6007a8, under GPL-3.0-or-later.
+See the root LICENSE and CommonLib-EXCEPTIONS.md. Distribute the matching
+source archive alongside the mod download. Third-party notices remain in force.

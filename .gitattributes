@@ -1,0 +1,10 @@
+* text=auto
+*.cpp text eol=crlf
+*.h text eol=crlf
+*.ps1 text eol=crlf
+*.py text eol=lf
+*.md text eol=lf
+*.svg text eol=lf
+*.ttf binary
+# Preserve third-party license text verbatim.
+/package/ThirdParty/CinzelDecorative/OFL.txt -whitespace

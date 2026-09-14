@@ -1,0 +1,26 @@
+/build/
+/backups/
+/release/
+/.vs/
+/CMakeUserPresets.json
+__pycache__/
+*.pyc
+*.log
+*.pdb
+*.tmp
+*.bak
+
+# Regenerated staging outputs; ship source, settings and licensed assets.
+/package/Wayfarer.esp
+/package/SKSE/Plugins/Wayfarer.dll
+/package/Scripts/*.pex
+/package/SEQ/*.seq
+/package/README.md
+/package/LICENSE
+/package/docs/
+
+# Downloaded research tools, not mod source or redistribution assets.
+/tools/champollion/
+/tools/caprica/
+/tools/*.zip
+/tools/*.7z

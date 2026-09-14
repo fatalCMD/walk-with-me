@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+  "name": "wayfarer",
+  "version-string": "0.16.7",
+  "description": "Predictive companion formation framework for Skyrim SE/AE",
+  "license": "GPL-3.0-or-later",
+  "dependencies": [
+    "commonlibsse-ng",
+    "simpleini"
+  ]
+}

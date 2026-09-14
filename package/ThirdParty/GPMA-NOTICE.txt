@@ -1,0 +1,10 @@
+Offset Movement Animation (GPMA) by Xing and GiraPomba
+https://www.nexusmods.com/skyrimspecialedition/mods/110408
+
+Walk With Me includes edits to GPMA 1.2's Nemesis-format source patch under
+Nemesis_Engine/mod/gpma/0_master. They add an upper-body gesture state while
+retaining the locomotion layer. Install the original GPMA mod as a requirement.
+
+The author's permission notes allow use in projects that list GPMA as a requirement.
+These files retain their upstream permissions; the mod's root GPL notice does not
+replace them. Generated behavior files and the full GPMA mod are not bundled.

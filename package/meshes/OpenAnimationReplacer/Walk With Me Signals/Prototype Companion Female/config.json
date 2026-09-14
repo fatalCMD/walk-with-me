@@ -1,0 +1,29 @@
+{
+    "name": "Companion Reference",
+    "description": "WWM_Companion_RelaxedRest_v2; approved reference for male and female characters, third person only.",
+    "priority": 27101922,
+    "conditions": [
+        {
+            "condition": "IsActorBase",
+            "requiredVersion": "1.0.0.0",
+            "Actor base": {
+                "pluginName": "Skyrim.esm",
+                "formID": "7"
+            }
+        },
+        {
+            "condition": "CompareValues",
+            "requiredVersion": "1.0.0.0",
+            "Value A": {
+                "form": {
+                    "pluginName": "FirstPersonInteractions.esp",
+                    "formID": "802"
+                }
+            },
+            "Comparison": "==",
+            "Value B": {
+                "value": 922.0
+            }
+        }
+    ]
+}

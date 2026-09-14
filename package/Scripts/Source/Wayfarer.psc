@@ -1,0 +1,31 @@
+Scriptname Wayfarer Hidden
+
+Bool Function RegisterFollower(Actor akFollower, Int aiPreferredSlot = -1) Global Native
+Bool Function UnregisterFollower(Actor akFollower) Global Native
+Bool Function ExcludeFollower(Actor akFollower) Global Native
+Bool Function IncludeFollower(Actor akFollower) Global Native
+Bool Function IsManaged(Actor akFollower) Global Native
+
+Function SetDialogueManagement(Actor akFollower, Bool abManage) Global Native
+Function SetEnabled(Bool abEnabled) Global Native
+Bool Function GetEnabled() Global Native
+Function SetFormationMode(Int aiMode) Global Native
+Int Function GetFormationMode() Global Native
+Int Function GetManagedCount() Global Native
+Function ReloadSettings() Global Native
+
+Actor Function GetSlotFollower(Int aiSlot) Global Native
+ObjectReference Function GetSlotMarker(Int aiSlot) Global Native
+ObjectReference Function GetRestSeat(Int aiSlot) Global Native
+Actor Function GetSocialTarget(Int aiSlot) Global Native
+Bool Function HasSocialGroup() Global Native
+Bool Function ShouldSuspendForDialogue() Global Native
+Function ReportAliasSync(Bool abBusy) Global Native
+Function ReportSocialIdle(Actor akActor, Bool abAccepted) Global Native
+Idle Function ConsumeSocialIdle(Int aiSlot) Global Native
+
+ObjectReference Function GetGatherMarker(Int aiSlot) Global Native
+Idle Function ConsumeRestIdle(Int aiSlot) Global Native
+Function ReportRestIdle(Int aiSlot, Actor akActor, Idle akIdle, Bool abAccepted) Global Native
+
+Bool Function HasRestActivities() Global Native
