@@ -15,7 +15,7 @@ Install matching [SKSE](https://skse.silverlock.org/),
 [Address Library](https://www.nexusmods.com/skyrimspecialedition/mods/32444) and
 [SKSE Menu Framework 3](https://www.nexusmods.com/skyrimspecialedition/mods/120352)
 builds, plus the x64 Visual C++ runtime. GOG 1.6.1179 needs SKSE 2.2.6 GOG.
-NFF and Nolvus are optional.
+NFF and other frameworks are optional.
 
 Command gestures also need First Person Interactions, Open Animation Replacer
 and generated GP Offset Movement Animation behavior. Third-person clips are
