@@ -12,7 +12,7 @@ Open **Walk With Me** in SKSE Menu Framework. Add followers from Party or their
 The SE/AE build targets 1.5.97, selected 1.6.x builds and 1.7.99/1.7.104.
 The 1.6/GOG and 1.7 paths still need in-game testing. Install matching SKSE,
 Address Library and Menu Framework 3 builds, plus the x64 Visual C++ runtime.
-NFF and Nolvus are optional. See [release details](docs/release.md).
+NFF and other frameworks are optional. See [release details](docs/release.md).
 
 ## Docs
 
